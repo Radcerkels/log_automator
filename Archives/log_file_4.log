@@ -1,0 +1,30 @@
+[2025-05-02 20:02:41] FAILED LOGIN: Invalid password for user dave from 192.168.2.15
+[2025-05-06 04:14:54] WARNING: High memory usage on server3 - RAM: 80%
+[2025-05-04 10:20:48] ERROR: Disk space low on server3
+[2025-05-06 01:27:22] INFO: User eve logged out from 192.168.2.15
+[2025-05-05 14:16:58] WARNING: High CPU usage on server1 - CPU: 81%
+[2025-05-04 00:56:20] FAILED LOGIN: Invalid password for user charlie from 10.0.0.5
+[2025-05-07 19:20:10] INFO: User dave logged out from 10.0.0.5
+[2025-05-04 17:46:59] FAILED LOGIN: Invalid password for user bob from 172.16.0.2
+[2025-05-02 07:43:18] INFO: User alice logged in from 10.0.0.5
+[2025-05-04 18:02:30] ERROR: Unauthorized access attempt by 192.168.2.15
+[2025-05-04 06:34:59] INFO: User charlie logged out from 10.0.0.5
+[2025-05-06 02:40:33] ERROR: Unauthorized access attempt by 10.0.0.5
+[2025-05-05 21:44:00] FAILED LOGIN: Invalid password for user alice from 192.168.2.15
+[2025-05-03 15:42:52] WARNING: High memory usage on server3 - RAM: 88%
+[2025-05-01 22:09:40] ERROR: Disk space low on server3
+[2025-05-04 12:50:02] ERROR: Disk space low on server2
+[2025-05-04 22:19:16] INFO: Backup completed successfully on server1
+[2025-05-03 16:15:32] INFO: User alice logged in from 172.16.0.2
+[2025-05-01 12:25:44] WARNING: High CPU usage on server2 - CPU: 85%
+[2025-05-01 23:32:30] ERROR: Service nginx failed to start on server2
+[2025-05-05 19:10:03] FAILED LOGIN: Invalid password for user alice from 10.0.0.5
+[2025-05-07 14:10:11] WARNING: High memory usage on server2 - RAM: 90%
+[2025-05-01 18:43:59] WARNING: High memory usage on server2 - RAM: 82%
+[2025-05-07 11:00:02] INFO: Backup completed successfully on server2
+[2025-05-05 01:42:44] INFO: User eve logged in from 192.168.2.15
+[2025-05-04 09:05:40] INFO: User dave logged in from 192.168.2.15
+[2025-05-06 01:13:10] WARNING: High memory usage on server1 - RAM: 82%
+[2025-05-07 02:39:55] ERROR: Disk space low on server3
+[2025-05-03 16:14:05] INFO: Backup completed successfully on server3
+[2025-05-04 00:31:12] WARNING: High CPU usage on server2 - CPU: 75%
