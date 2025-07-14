@@ -1,0 +1,28 @@
+[2025-05-07 03:03:21] ERROR: Service mysql failed to start on server2
+[2025-05-03 02:15:07] ERROR: Disk space low on server1
+[2025-05-06 12:02:25] ERROR: Service ssh failed to start on server3
+[2025-05-01 17:55:44] ERROR: Service ssh failed to start on server1
+[2025-05-04 10:21:35] ERROR: Disk space low on server2
+[2025-05-01 16:45:33] ERROR: Disk space low on server3
+[2025-05-07 06:09:38] ERROR: Service ssh failed to start on server1
+[2025-05-02 07:45:55] ERROR: Service nginx failed to start on server3
+[2025-05-04 10:20:48] ERROR: Disk space low on server3
+[2025-05-01 22:09:40] ERROR: Disk space low on server3
+[2025-05-04 12:50:02] ERROR: Disk space low on server2
+[2025-05-01 23:32:30] ERROR: Service nginx failed to start on server2
+[2025-05-07 02:39:55] ERROR: Disk space low on server3
+[2025-05-04 21:24:59] ERROR: Disk space low on server1
+[2025-05-05 09:05:49] ERROR: Disk space low on server1
+[2025-05-02 14:50:05] ERROR: Service ssh failed to start on server3
+[2025-05-06 06:24:01] ERROR: Disk space low on server2
+[2025-05-03 03:43:08] ERROR: Service mysql failed to start on server1
+[2025-05-06 05:46:21] ERROR: Service mysql failed to start on server1
+[2025-05-01 14:15:43] ERROR: Disk space low on server1
+[2025-05-06 17:20:34] ERROR: Disk space low on server1
+[2025-05-07 04:55:23] ERROR: Disk space low on server2
+[2025-05-03 17:32:05] ERROR: Service mysql failed to start on server2
+[2025-05-06 10:10:20] ERROR: Disk space low on server2
+[2025-05-06 14:40:42] ERROR: Service nginx failed to start on server3
+[2025-05-06 12:44:59] ERROR: Disk space low on server2
+[2025-05-07 02:39:47] ERROR: Service ssh failed to start on server3
+[2025-05-05 17:25:44] ERROR: Disk space low on server1
