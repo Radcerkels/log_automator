@@ -42,11 +42,10 @@ def parse_log_file(log):
     """
     logs_dir = os.path.join(os.getcwd(), "logs")  
     """logs/ creation"""
-    os.makedirs(logs_dir, exist_ok=True)
+    os.makedirs(logs_dir , exist_ok=True)
 
-    report_dir =  os.path.join(os.getcwd(),"reports") 
     """report/ creation"""
-    os.makedirs(report_dir, exist_ok=True)
+    os.makedirs(os.path.join(os.getcwd(),"reports") , exist_ok=True)
 
     """
     We change keys (file's names) and add date for repots and logs
@@ -54,20 +53,20 @@ def parse_log_file(log):
     date = str(datetime.now().date() )
     """Date of modification in our script"""
 
-    Names_Logs_maj, Names_Reports_maj = {} , {}
+    Names_Logs_update, Names_Reports_update = {} , {}
     for key, value in Names_Reports.items():
         key = re.sub(r"date", date, key)
-        Names_Reports_maj[key] = value
+        Names_Reports_update[key] = value
     
     for key, value in compiled_patterns.items():
         key = re.sub(r"date", date, key)
-        Names_Logs_maj[key] = value
+        Names_Logs_update[key] = value
     
     """organization of logs in sample_logs/ in another .log file"""
     with open(log) as log_file:
         for line in log_file:
             find = False
-            for key, regex in Names_Logs_maj.items():
+            for key, regex in Names_Logs_update.items():
 
                 """
                 The "find" boolean help for logs without match. Its goal is to give us alert when 
@@ -81,14 +80,14 @@ def parse_log_file(log):
                         """
                         if we find correspondance, we take importants information for reports
                         """
-                        Names_Reports_maj[key].append(new_line)
+                        Names_Reports_update[key].append(new_line)
                         find = True
                         break
             if not find:
                 with open(os.path.join(logs_dir, "other_logs.log"), "a") as file:
                     file.write(line.strip() + "\n")
 
-    return Names_Reports_maj
+    return Names_Reports_update
 
 
 
