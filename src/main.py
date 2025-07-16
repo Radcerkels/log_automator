@@ -20,7 +20,7 @@ def __main__():
     for log in log_dir:
         result = parse_log_file(os.path.join("sample_logs", log))
     
-    reports = merge(result, reports)
+        reports = merge(result, reports)
 
     """
     repports = {key : report_name, value : dict}
