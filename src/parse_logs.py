@@ -64,13 +64,6 @@ def parse_log_file(log):
     """Date of modification in our script"""
 
     Names_Logs_update, Names_Reports_update = filenamesWithDate()
-#    for key, value in Names_Reports.items():
-#        key = re.sub(r"date", date, key)
-#        Names_Reports_update[key] = value
-    
-#    for key, value in compiled_patterns.items():
-#        key = re.sub(r"date", date, key)
-#        Names_Logs_update[key] = value
     
     """organization of logs in sample_logs/ in another .log file"""
     with open(log) as log_file:
