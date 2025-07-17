@@ -4,10 +4,14 @@ from send_mail import *
 from generate_report import *
 from archive import *
 import pandas as pd
+from send_mail import *
 
 
 
 def __main__():
+
+
+
     """
     We will list all .log files in sample_logs/ then apply the parse_logs_files() function
     on each of them and save organized .log in logs/ and .csv reports of each of them in reports/

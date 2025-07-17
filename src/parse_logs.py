@@ -51,8 +51,6 @@ Names_Reports
 
 def parse_log_file(log):
 
-
-
     logs_dir = os.path.join(os.getcwd(), "logs")  
     """logs/ creation"""
     os.makedirs(logs_dir , exist_ok=True)
