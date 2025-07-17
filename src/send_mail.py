@@ -109,7 +109,7 @@ def send_mail():
             message_text=message_text)
         
         send_message(service, 'me', email)
-        general_message += message_text + "\n"
+        general_message += f"{subject} : {message_text}\n"
 
     if not general_message:
         sys.exit("No alerts found. Exiting...")
