@@ -35,6 +35,8 @@ def __main__():
         df.to_csv(os.path.join(os.getcwd(),"reports", key.replace(".log",".csv")), index = False)
     print("End of .log file's organisation...")
 
+    send_mail()
+
     """
     We save the .log of sample_logs/ in Archives/ after traitment
     """

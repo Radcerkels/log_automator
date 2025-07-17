@@ -96,7 +96,7 @@ def parse_log_file(log):
 This function merge created dictionaries which are output of parse_log_file(). It return
 all dictionnaries in one with values which are report's names...
 """
-def merge(Names_Reports_maj, report):
-    for key, value in Names_Reports_maj.items():
+def merge(Names_Reports_update, report):
+    for key, value in Names_Reports_update.items():
         report.setdefault(key, []).extend(value)
     return report
