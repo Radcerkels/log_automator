@@ -1,4 +1,4 @@
-#coding = utf-8
+# coding: utf-8
 
 import base64
 from email.mime.text import MIMEText
@@ -9,7 +9,6 @@ import os.path
 import pickle
 import sys
 
-# ✅ Portée d'autorisation
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 
 def gmail_authenticate():

@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding: utf-8
 
 import os
 import re
@@ -27,7 +27,7 @@ def filenamesWithDate():
               f"server3_sys_{date}.log": r"\[([\d -:]+)\] WARNING: High (\w+ usage) on server3 - \w+: (\d+)%",
               f"backup_{date}.log": r"\[([\d -:]+)\] INFO: Backup (\w+) successfully on (\w+)",
               f"security_{date}.log": r"\[([\d -:]+)\] ERROR: ([\w ]+) attempt by ([\d.]+)"}
-    compiled_patterns = {key: re.compile(value) for key, value in Names_Logs.items()}
+#    compiled_patterns = {key: re.compile(value) for key, value in Names_Logs.items()}
 
     """
     Names_Reports contains values which are lists of dictionary. We will use the pandas modulo for
@@ -41,7 +41,8 @@ def filenamesWithDate():
               f"server3_sys_{date}.log": [],
               f"backup_{date}.log": [],
               f"security_{date}.log": []}
-    return compiled_patterns , Names_Reports
+#    return compiled_patterns , Names_Reports
+    return Names_Logs, Names_Reports
 
 
 """
@@ -50,6 +51,7 @@ Names_Reports
 """
 
 def parse_log_file(log):
+
 
     logs_dir = os.path.join(os.getcwd(), "logs")  
     """logs/ creation"""
@@ -63,30 +65,28 @@ def parse_log_file(log):
 
     Names_Logs_update, Names_Reports_update = filenamesWithDate()
     
+    """
+    create a dictionary which will optimize the search of regex in logs. We take the head of the key
+    and associate the name of the log file in Names_Logs_update
+    """
+    headOfKeys = {key.split("_")[0]: key for key in Names_Logs_update.keys()}
+
+
     """organization of logs in sample_logs/ in another .log file"""
     with open(log) as log_file:
-        for line in log_file:
-            find = False
-            for key, regex in Names_Logs_update.items():
 
-                """
-                The "find" boolean help for logs without match. Its goal is to give us alert when 
-                all regex don't match
-                """
-                if regex.search(line):
-                    with open(os.path.join(logs_dir, key), "a") as file:
-                        file.write(line.strip() + "\n")
-                    new_line = report_creation(regex, line)
-                    if new_line:
-                        """
-                        if we find correspondance, we take importants information for reports
-                        """
-                        Names_Reports_update[key].append(new_line)
-                        find = True
-                        break
-            if not find:
+        for line in log_file:
+            new_line , type_of_log = report_creation(line)
+
+            if not new_line:
                 with open(os.path.join(logs_dir, "other_logs.log"), "a") as file:
                     file.write(line.strip() + "\n")
+                continue
+
+            with open(os.path.join(logs_dir, headOfKeys[type_of_log]), "a") as file:
+                        file.write(line.strip() + "\n")
+            Names_Reports_update[ headOfKeys[type_of_log] ].append(new_line)
+
 
     return Names_Reports_update
 

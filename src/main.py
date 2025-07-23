@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding: utf-8
 from parse_logs import *
 from send_mail import *
 from generate_report import *
